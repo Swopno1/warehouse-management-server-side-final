@@ -1,1 +1,3 @@
-# warehouse-management-server-side-Swopno1
+# Inventoryish-server
+
+This is the server of the Inventoryish project. More details will be update afterwards...

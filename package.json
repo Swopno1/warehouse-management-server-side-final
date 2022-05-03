@@ -1,0 +1,22 @@
+{
+  "name": "inventoryis-server",
+  "version": "1.0.0",
+  "description": "This is the backend server for the Inventoryish project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swopno1.git"
+  },
+  "author": "Md Amir Hossain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swopno1/issues"
+  },
+  "homepage": "https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swopno1#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

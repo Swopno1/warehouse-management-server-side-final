@@ -4,7 +4,7 @@ const port = process.env.PORT || 4000;
 
 // Root API link GET request
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello Inventoryish!");
 });
 
 // Listening the app

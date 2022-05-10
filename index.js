@@ -1,8 +1,8 @@
-const express = require("express");
-const cors = require("cors");
-const { MongoClient, ServerApiVersion } = require("mongodb");
-require("dotenv").config();
-const port = process.env.PORT || 4000;
+const express = require('express');
+const cors = require('cors');
+const { MongoClient, ServerApiVersion } = require('mongodb');
+require('dotenv').config();
+const port = process.env.PORT || 5000;
 const app = express();
 
 // Initiate Middleware
@@ -22,10 +22,10 @@ const run = async () => {
   try {
     await client.connect();
     const inventoryCollections = client
-      .db("inventoryish")
-      .collection("inventory");
+      .db('inventoryish')
+      .collection('inventory');
 
-    app.get("/inventory", async (req, res) => {
+    app.get('/inventory', async (req, res) => {
       const query = {};
       const cursor = inventoryCollections.find(query);
 
@@ -40,8 +40,8 @@ const run = async () => {
 run().catch(console.dir);
 
 // Root API link GET request
-app.get("/", (req, res) => {
-  res.send("Hello Inventoryish!");
+app.get('/', (req, res) => {
+  res.send('Hello Inventoryish!');
 });
 
 // Listening the app

@@ -34,6 +34,13 @@ const run = async () => {
       res.send(inventory);
     });
 
+    app.post("/inventory", async (req, res) => {
+      const product = req.body;
+      const result = await inventoryCollections.insertOne(product);
+
+      res.send({ success: true, result });
+    });
+
     app.get("/inventory/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -50,14 +57,19 @@ const run = async () => {
       const updateDoc = {
         $set: newDoc,
       };
-
       const result = await inventoryCollections.updateOne(
         filter,
         updateDoc,
         options
       );
-
       res.send(result);
+    });
+
+    app.delete("/inventory/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: ObjectId(id) };
+      const result = await inventoryCollections.deleteOne(filter);
+      res.send({ success: true, result });
     });
   } finally {
   }
